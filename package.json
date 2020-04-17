@@ -1,0 +1,48 @@
+{
+  "name": "wxclient",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "packageDarwin": "electron-packager ./ 微信读书 --platform=darwin --arch=x64 --icon=./wx.icns --out ./dist --asar --app-version 1.0.0 --overwrite",
+    "packageWin": "electron-packager ./ 微信读书 --platform=win32 --arch=x64 --icon=./wx.ico --out ./dist --asar --app-version 1.0.0 --overwrite"
+  },
+  "repository": "",
+  "build": {
+    "appId": "com.fengjutian",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "icon": "./wx_icon.png",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "./wx_icon.png",
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^8.2.2",
+    "electron-packager": "^14.2.1"
+  },
+  "dependencies": {
+    "electron-builder": "^22.4.1"
+  }
+}
